@@ -1,13 +1,57 @@
 ---
-import Header from '../components/Header.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Layout from "../layouts/Layout.astro";
+import Badge from "../components/Badge.astro";
+import SocialItem from "../components/SocialItem.astro";
+import LinkedInIcon from "../icons/LinkedIn.astro";
+import GitHubIcon from "../icons/GitHub.astro";
+import MailIcon from "../icons/Mail.astro";
 ---
 
-<Layout>
+<Layout title="Portafolio">
 	<main>
-		
-	</main>
-</Layout>
+		<section class="w-full lg:w-[880px] mx-auto py-44">
+			<img
+				class="rounded-full w-20 h-20 mb-4"
+				src="https://static-cdn.jtvnw.net/jtv_user_pictures/b0be7af0-99a0-4e39-b248-d3f596946437-profile_image-300x300.png"
+				alt="Profile Photo"
+			/>
+			<h1 class="text-white text-5xl font-bold flex-row flex gap-x-4 pb-10">
+				Hey, soy Andrés Quintana
+				<a
+					href="https://www.linkedin.com/in/andr%C3%A9s-quintana-b205592b4/"
+					target="_blank"
+					rel="noopener"
+					class="flex justify-center items-center"
+				>
+					<Badge>Disponible para trabajar</Badge>
+				</a>
+			</h1>
+			<h2 class="text-2xl opacity-80 text-wrap">
+				<span class="text-yellow-200"
+					>Estudiante de Ingeniería de Sistemas y Desarrollador Web Junior</span
+				> enfocado en el desarrollo Frontend. <span class="text-red-400"
+					>De Cartagena, Colombia</span
+				>.
+				<span class="opacity-75"
+					>En proceso de aprendizaje y perfeccionamiento de nuevas tecnologías.</span
+				>
+			</h2>
+			<nav class="flex gap-x-3 mt-10">
+				<SocialItem
+					href="https://www.linkedin.com/in/andr%C3%A9s-quintana-b205592b4/"
+				>
+					<LinkedInIcon class="w-6 h-6" />
+					LinkedIn
+				</SocialItem>
+				<SocialItem href="https://github.com/AndrxsQ">
+					<GitHubIcon class="w-6 h-6" />
+					GitHub
+				</SocialItem>
+				<SocialItem href="andresquintana2004@gmail.com">
+					<MailIcon class="w-6 h-6" />
+					andresquintana2004@gmail.com
+				</SocialItem>
+			</nav>
+		</section>
+	</main></Layout
+>
