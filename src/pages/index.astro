@@ -5,13 +5,16 @@ import SocialItem from "../components/SocialItem.astro";
 import LinkedInIcon from "../icons/LinkedIn.astro";
 import GitHubIcon from "../icons/GitHub.astro";
 import MailIcon from "../icons/Mail.astro";
+import SectionBox from "../components/SectionBox.astro";
 ---
 
-<Layout title="Portafolio de Andrés Quintana - Desarrollador y programador FrontEnd">
+<Layout
+	title="Portafolio de Andrés Quintana - Desarrollador y Programador FrontEnd"
+	description="Portafolio Web de Andrés Quintana. Desarrollador y Programador FrontEnd">
 	<main>
-		<section class="w-full lg:w-[880px] mx-auto py-44">
+		<SectionBox>
 			<img
-				class="rounded-full w-20 h-20 mb-4"
+				class="rounded-full size-20 mb-4"
 				src="https://static-cdn.jtvnw.net/jtv_user_pictures/b0be7af0-99a0-4e39-b248-d3f596946437-profile_image-300x300.png"
 				alt="Profile Photo"
 			/>
@@ -27,27 +30,22 @@ import MailIcon from "../icons/Mail.astro";
 				</a>
 			</h1>
 			<h2 class="text-2xl opacity-80 text-wrap">
-				<span class="text-yellow-200">Estudiante de Ingeniería de Sistemas y Desarrollador Web Junior</span> 
+				<span class="text-yellow-200">Estudiante de Ingeniería de Sistemas y Desarrollador Web</span> 
 				enfocado en el desarrollo FrontEnd. 
 				<span class="text-red-400">De Cartagena, Colombia</span>.
 				<span class="opacity-75">En proceso de aprendizaje y perfeccionamiento de nuevas tecnologías.</span>
 			</h2>
-			<nav class="flex gap-x-3 mt-10">
-				<SocialItem
-					href="https://www.linkedin.com/in/andr%C3%A9s-quintana-b205592b4/"
-				>
-					<LinkedInIcon class="w-6 h-6" />
-					LinkedIn
+			<nav class="flex gap-x-3 mt-5">
+				<SocialItem href="https://www.linkedin.com/in/andr%C3%A9s-quintana-b205592b4/">
+					<LinkedInIcon class="size-7" />
 				</SocialItem>
 				<SocialItem href="https://github.com/AndrxsQ">
-					<GitHubIcon class="w-6 h-6" />
-					GitHub
+					<GitHubIcon class="size-7" />
 				</SocialItem>
 				<SocialItem href="andresquintana2004@gmail.com">
-					<MailIcon class="w-6 h-6" />
-					andresquintana2004@gmail.com
+					<MailIcon class="size-7" />
 				</SocialItem>
 			</nav>
-		</section>
-	</main></Layout
->
+		</SectionBox>
+	</main>
+</Layout>
