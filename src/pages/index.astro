@@ -2,17 +2,23 @@
 import Layout from "../layouts/Layout.astro";
 import Badge from "../components/Badge.astro";
 import SocialItem from "../components/SocialItem.astro";
+import SectionBox from "../components/SectionBox.astro";
+import ProjectItem from "../components/ProjectItem.astro";
 import LinkedInIcon from "../icons/LinkedIn.astro";
 import GitHubIcon from "../icons/GitHub.astro";
 import MailIcon from "../icons/Mail.astro";
-import SectionBox from "../components/SectionBox.astro";
+import CodeIcon from "../icons/Code.astro";
+import HtmlIcon from "../icons/Html.astro";
+import TailwindIcon from "../icons/Tailwind.astro";
+import TypeScriptIcon from "../icons/TypeScript.astro";
 ---
 
 <Layout
 	title="Portafolio de Andrés Quintana - Desarrollador y Programador FrontEnd"
-	description="Portafolio Web de Andrés Quintana. Desarrollador y Programador FrontEnd">
+	description="Portafolio Web de Andrés Quintana. Desarrollador y Programador FrontEnd"
+>
 	<main>
-		<SectionBox class="py-36">
+		<SectionBox id="Inicio" class="py-36">
 			<img
 				class="rounded-full size-20 mb-4"
 				src="https://static-cdn.jtvnw.net/jtv_user_pictures/b0be7af0-99a0-4e39-b248-d3f596946437-profile_image-300x300.png"
@@ -30,13 +36,21 @@ import SectionBox from "../components/SectionBox.astro";
 				</a>
 			</h1>
 			<h2 class="text-2xl opacity-80 text-wrap">
-				<span class="text-yellow-200">Estudiante de Ingeniería de Sistemas y Desarrollador Web</span> 
-				enfocado en el desarrollo FrontEnd. 
+				Estudiante de
+				<span class="text-yellow-200"
+					>Ingeniería de Sistemas y Desarrollador Web</span
+				>
+				enfocado en el desarrollo FrontEnd.
 				<span class="text-red-400">De Cartagena, Colombia</span>.
-				<span class="opacity-75">En proceso de aprendizaje y perfeccionamiento de nuevas tecnologías.</span>
+				<span class="opacity-75"
+					>Programador Junior perfeccionando tecnologías ya conocidas y
+					adquiriendo nuevas.</span
+				>
 			</h2>
 			<nav class="flex gap-x-3 mt-5">
-				<SocialItem href="https://www.linkedin.com/in/andr%C3%A9s-quintana-b205592b4/">
+				<SocialItem
+					href="https://www.linkedin.com/in/andr%C3%A9s-quintana-b205592b4/"
+				>
 					<LinkedInIcon class="size-7" />
 				</SocialItem>
 				<SocialItem href="https://github.com/AndrxsQ">
@@ -46,6 +60,22 @@ import SectionBox from "../components/SectionBox.astro";
 					<MailIcon class="size-7" />
 				</SocialItem>
 			</nav>
+		</SectionBox>
+		<SectionBox id="Proyectos">
+			<h2 class="text-4xl font-semibold mb-6 flex gap-x-1 items-center">
+				<CodeIcon class="size-10" />
+				Proyectos
+			</h2>
+			<ProjectItem
+				title="Portafolio"
+				description="Este es mi portafolio personal el cuál creo como mi primer proyecto para iniciarme en el desarrollo web, especialmente como desarrollador frontend."
+				github="https://github.com/AndrxsQ/Portafolio"
+				image="/projects/Portafolio.webp"
+			>
+				<HtmlIcon class="size-14" />
+				<TailwindIcon class="size-14" />
+				<TypeScriptIcon class="size-14" />
+			</ProjectItem>
 		</SectionBox>
 	</main>
 </Layout>
