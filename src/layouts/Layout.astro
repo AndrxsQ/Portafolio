@@ -21,9 +21,9 @@ const { title, description } = Astro.props;
 		<meta name="description" content={description} />
 		<title>{title}</title>
 	</head>
-	<body>
+	<body class="relative">
 		<div
-			class="absolute top-0 z-[-2] h-screen w-screen bg-[#000000] bg-[radial-gradient(#ffffff33_1px,#00091d_1px)] bg-[size:20px_20px]"
+			class="absolute min-h-screen w-full top-0 bottom-0 z-[-2] bg-[#000000] bg-[radial-gradient(#ffffff33_1px,#00091d_1px)] bg-[size:20px_20px]"
 		>
 		</div>
 		<Header />
