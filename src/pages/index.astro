@@ -11,6 +11,8 @@ import CodeIcon from "../icons/Code.astro";
 import HtmlIcon from "../icons/Html.astro";
 import TailwindIcon from "../icons/Tailwind.astro";
 import TypeScriptIcon from "../icons/TypeScript.astro";
+import UserIcon from "../icons/User.astro";
+import AboutMe from "../components/AboutMe.astro";
 ---
 
 <Layout
@@ -18,14 +20,13 @@ import TypeScriptIcon from "../icons/TypeScript.astro";
 	description="Portafolio Web de Andrés Quintana. Desarrollador y Programador FrontEnd"
 >
 	<main>
-		<SectionBox id="Inicio" class="py-36">
-			<img
-				class="rounded-full size-20 mb-4"
-				src="https://static-cdn.jtvnw.net/jtv_user_pictures/b0be7af0-99a0-4e39-b248-d3f596946437-profile_image-300x300.png"
-				alt="Profile Photo"
-			/>
-			<h1 class="text-white text-5xl font-bold flex-row flex gap-x-4 pb-10">
-				Hey, soy Andrés Quintana
+		<SectionBox id="inicio" class="py-32">
+			<div class="flex flex-row gap-x-5">
+				<img
+					class="rounded-full size-24 mb-4"
+					src="https://static-cdn.jtvnw.net/jtv_user_pictures/b0be7af0-99a0-4e39-b248-d3f596946437-profile_image-300x300.png"
+					alt="Profile Photo"
+				/>
 				<a
 					href="https://www.linkedin.com/in/andr%C3%A9s-quintana-b205592b4/"
 					target="_blank"
@@ -34,6 +35,9 @@ import TypeScriptIcon from "../icons/TypeScript.astro";
 				>
 					<Badge>Disponible para trabajar</Badge>
 				</a>
+			</div>
+			<h1 class="text-white text-5xl font-bold flex-row flex gap-x-4 pb-10">
+				Hola, soy Andrés Quintana
 			</h1>
 			<h2 class="text-2xl opacity-80 text-wrap">
 				Estudiante de
@@ -61,7 +65,7 @@ import TypeScriptIcon from "../icons/TypeScript.astro";
 				</SocialItem>
 			</nav>
 		</SectionBox>
-		<SectionBox id="Proyectos">
+		<SectionBox id="proyectos">
 			<h2 class="text-4xl font-semibold mb-6 flex gap-x-1 items-center">
 				<CodeIcon class="size-10" />
 				Proyectos
@@ -76,6 +80,13 @@ import TypeScriptIcon from "../icons/TypeScript.astro";
 				<TailwindIcon class="size-14" />
 				<TypeScriptIcon class="size-14" />
 			</ProjectItem>
+		</SectionBox>
+		<SectionBox class="py-16" id="sobre_mi">
+			<h2 class="text-4xl font-semibold mb-6 flex gap-x-1 items-center">
+				<UserIcon class="size-10" />
+				Sobre mí
+			</h2>
+			<AboutMe />
 		</SectionBox>
 	</main>
 </Layout>
