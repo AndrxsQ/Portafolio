@@ -1,5 +1,10 @@
-<footer>
-  <nav>
-    Aquí está el Footer
-  </nav>
+---
+const year = new Date().getFullYear();
+---
+
+<footer class="flex justify-between items-center py-8 w-full lg:w-[880px] mx-auto">
+  <div class="hover:underline">
+    © {year} Andrés Quintana. Todos los derechos reservados
+  </div>
+  <a class="hover:underline" href="#proyectos">Proyectos</a>
 </footer>
