@@ -3,6 +3,7 @@ import HomeIcon from "../icons/Home.astro";
 import CodeIcon from "../icons/Code.astro";
 import UserIcon from "../icons/User.astro";
 import MailIcon from "../icons/Mail.astro";
+import DownloadIcon from "../icons/Download.astro";
 
 const navItems = [
   {
@@ -29,18 +30,29 @@ const navItems = [
     url: "mailto:andresquintana2004@gmail.com",
     icon: MailIcon,
   },
+  {
+    title: "Descargar CV",
+    label: "descargar_cv",
+    url: "/CV.pdf",
+    icon: DownloadIcon,
+  },
 ];
 ---
 
-<header class="flex justify-center items-center py-8 w-[1120px] mx-auto">
+<header
+  class="flex fixed top-0 z-10 mt-2 justify-center items-center py-8 w-full mx-auto"
+>
   <nav class="flex flex-row gap-x-10">
     {
       navItems.map((item) => (
         <a
-          class="relative block px-2 py-2 transition hover:text-red-700"
+          class="flex flex-row gap-x-2 px-2 py-2 transition hover:text-blue-400"
           aria-label={item.label}
           href={item.url}
+          target="_blank"
+          rel="noopener noreferrer"
         >
+          <item.icon />
           {item.title}
         </a>
       ))
