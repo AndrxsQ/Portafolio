@@ -1,33 +1,49 @@
 ---
+import HomeIcon from "../icons/Home.astro";
+import CodeIcon from "../icons/Code.astro";
+import UserIcon from "../icons/User.astro";
+import MailIcon from "../icons/Mail.astro";
+
 const navItems = [
   {
-    title: "Experiencia",
-    label: "experiencia",
-    url: "/#experiencia",
+    title: "Inicio",
+    label: "inicio",
+    url: "/#inicio",
+    icon: HomeIcon,
   },
   {
     title: "Proyectos",
     label: "proyectos",
     url: "/#proyectos",
+    icon: CodeIcon,
   },
   {
     title: "Sobre mí",
-    label: "sobre-mi",
-    url: "/#sobre-mi",
+    label: "sobre_mi",
+    url: "/#sobre_mi",
+    icon: UserIcon,
   },
   {
     title: "Contacto",
     label: "contacto",
-    url: "mailto:miduga@gmail.com",
+    url: "mailto:andresquintana2004@gmail.com",
+    icon: MailIcon,
   },
 ];
 ---
 
 <header class="flex justify-center items-center py-8 w-[1120px] mx-auto">
   <nav class="flex flex-row gap-x-10">
-    <a href="/#top">Inicio</a>
-    <a href="/#proyectos">Proyectos</a>
-    <a href="/#sobre_mi">Sobre mí</a>
-    <a href="/#contacto">Contacto</a>
+    {
+      navItems.map((item) => (
+        <a
+          class="relative block px-2 py-2 transition hover:text-red-700"
+          aria-label={item.label}
+          href={item.url}
+        >
+          {item.title}
+        </a>
+      ))
+    }
   </nav>
 </header>
