@@ -31,9 +31,11 @@ const navItems = [
     icon: MailIcon,
   },
   {
+    target: "_blank",
+    rel: "noopener noreferrer",
     title: "Descargar CV",
     label: "descargar_cv",
-    url: "/CV.pdf",
+    url: "/CV_english.pdf",
     icon: DownloadIcon,
   },
 ];
@@ -49,8 +51,8 @@ const navItems = [
           class="flex flex-row gap-x-2 px-2 py-2 transition hover:text-blue-400"
           aria-label={item.label}
           href={item.url}
-          target="_blank"
-          rel="noopener noreferrer"
+          rel={item.rel}
+          target={item.target}
         >
           <item.icon />
           {item.title}
